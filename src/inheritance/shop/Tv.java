@@ -9,13 +9,7 @@ public class Tv extends Product {
     private BigDecimal discount = new BigDecimal("0.90");
 
 
-    public Tv() {
 
-        super();
-        inches = 0;
-        isSmart = false;
-
-    }
 
     public Tv(String name, String descrizione, BigDecimal price, BigDecimal vat, int inches, boolean isSmart) {
         super(name, descrizione, price, vat);

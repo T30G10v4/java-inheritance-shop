@@ -13,16 +13,7 @@ public class Product {
 
     protected BigDecimal discount = new BigDecimal("0.98");
 
-    public Product(){
 
-        Random rnd = new Random();
-        code = rnd.nextInt(1,100000000);
-        name ="";
-        description = "";
-        price = new BigDecimal("0.00");
-        vat = new BigDecimal("0.00");
-
-    }
 
     public Product(String name, String descrizione, BigDecimal price, BigDecimal vat) {
         Random rnd = new Random();

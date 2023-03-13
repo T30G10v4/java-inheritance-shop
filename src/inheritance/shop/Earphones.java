@@ -9,11 +9,7 @@ public class Earphones extends Product {
 
     private BigDecimal discount = new BigDecimal("0.93");
 
-    public Earphones() {
-        super();
-        color = "";
-        isWireless = false;
-    }
+
 
     public Earphones(String name, String descrizione, BigDecimal price, BigDecimal vat, String color, boolean isWireless) {
         super(name, descrizione, price, vat);
