@@ -1,15 +1,17 @@
-package java.inheritance.shop;
+package inheritance.shop;
 
 import java.math.BigDecimal;
 import java.util.Random;
 
 public class Product {
 
-    private int code;
-    private String name;
-    private String description;
-    BigDecimal price;
-    BigDecimal vat;
+    protected int code;
+    protected String name;
+    protected String description;
+    protected BigDecimal price;
+    protected BigDecimal vat;
+
+    protected BigDecimal discount = new BigDecimal("0.98");
 
     public Product(){
 
@@ -50,6 +52,13 @@ public class Product {
     public BigDecimal getVatPrice() {
 
         return price.add(price.multiply(vat));
+
+    }
+
+    public BigDecimal getDiscountPrice(boolean hasCard) {
+
+        if (hasCard) return getVatPrice().multiply(discount);
+        else return getPrice();
 
     }
 
